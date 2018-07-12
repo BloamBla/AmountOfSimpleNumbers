@@ -1,0 +1,24 @@
+{
+  "name": "amountofsimplenumbers",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BloamBla/AmountOfSimpleNumbers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BloamBla/AmountOfSimpleNumbers/issues"
+  },
+  "homepage": "https://github.com/BloamBla/AmountOfSimpleNumbers#readme",
+  "dependencies": {
+    "eslint": "^5.1.0",
+    "eslint-plugin-modules": "^1.1.1",
+    "eslint-config-google": "^0.9.1"
+  }
+}

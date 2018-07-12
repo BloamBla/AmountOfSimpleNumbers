@@ -5,8 +5,7 @@ if (number === null) {
 else if (number === "") {
   alert("Вы ничего не ввели!");
   location.reload();
-}
-else if (number < 1) {
+} else if (number < 1) {
   alert("Ну я же просил...!");
   location.reload();
 }
