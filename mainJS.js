@@ -1,4 +1,18 @@
 ﻿var number = prompt("Введите число больше 0.");
+
+function amountOfSimleNumbers(a) {
+    var counter = 0;
+    var simleNumbers = "";
+nextPrime:
+    for(var i = 2; i <= a; i++) {
+      for (var j = 2; j < i; j++) {
+        if (i % j == 0) continue nextPrime;
+      }
+      simleNumbers += " " + i;
+      counter += 1;
+    }
+    return counter;
+  }
 if (number === null) {
   alert("Ещё увидимся!");
 }
@@ -14,18 +28,5 @@ else if (isNaN(number)) {
   location.reload();
 }
 else {
-  var counter = 0;
-  var simleNumbers = "";
-  function amountOfSimleNumbers(a) {
-nextPrime:
-    for(var i = 2; i <= a; i++) {
-      for (var j = 2; j < i; j++) {
-        if (i % j == 0) continue nextPrime;
-      }
-      simleNumbers += " " + i;
-      counter += 1;
-    }
-    return counter;
-  }
   alert("Количество простых чисел в интервале от 1 до " + number + " равно - " + amountOfSimleNumbers(number) + ".\n" + "Простые числа в это интервале - " + simleNumbers);
 }
