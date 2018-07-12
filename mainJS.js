@@ -1,7 +1,8 @@
 ﻿var number = prompt("Введите число больше 0.");
-var counter = 0;
-var simleNumbers = "";
+
 function amountOfSimleNumbers(a) {
+    var counter = 0;
+    var simleNumbers = "";
 nextPrime:
     for(var i = 2; i <= a; i++) {
       for (var j = 2; j < i; j++) {
