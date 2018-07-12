@@ -11,7 +11,7 @@ else if (number < 1) {
   location.reload();
 }
 else if (isNaN(number)) {
-  alert("Это точно не чилсо...");
+  alert("Это точно не число...");
   location.reload();
 }
 else {
