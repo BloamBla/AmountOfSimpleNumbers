@@ -14,15 +14,25 @@ if (number === null) {
   location.reload();
 } else {
   function amountOfSimpleNumbers(a) {
+    let isSimpleNumber = false;
     let simpleNumbers = '';
     let counter = 0;
-    nextPrime:
     for (let i = 2; i <= a; i++) {
-      for (let j = 2; j < i; j++) {
-        if (i % j === 0) continue nextPrime;
+      if (i === 2) {
+        simpleNumbers += ' ' + i;
+        counter += 1;
+      } else {
+        for (let j = 2; j < i; j++) {
+          if (i % j === 0) {
+            isSimpleNumber = false;
+            break;
+          } else isSimpleNumber = true;
+        }
+        if (isSimpleNumber === true) {
+          simpleNumbers += ' ' + i;
+          counter += 1;
+        }
       }
-      simpleNumbers += ' ' + i;
-      counter += 1;
     }
     return [simpleNumbers, counter];
   }
