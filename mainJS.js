@@ -13,9 +13,9 @@ if (number === null) {
   alert('Это точно не число...');
   location.reload();
 } else {
-  let counter = 0;
-  let simpleNumbers = '';
   function amountOfSimpleNumbers(a) {
+    let simpleNumbers = '';
+    let counter = 0;
     nextPrime:
     for (let i = 2; i <= a; i++) {
       for (let j = 2; j < i; j++) {
@@ -24,7 +24,9 @@ if (number === null) {
       simpleNumbers += ' ' + i;
       counter += 1;
     }
-    return counter;
+    return [simpleNumbers, counter];
   }
-  alert('Количество простых чисел в интервале от 1 до ' + number + ' равно - ' + amountOfSimpleNumbers(number) + '.\n' + 'Простые числа в это интервале - ' + simpleNumbers);
+  let result = amountOfSimpleNumbers(number);
+  alert('Количество простых чисел в интервале от 1 до ' + number + ' равно - ' +
+      result[1] + '.\n' + 'Простые числа в это интервале - ' + result[0]);
 }
