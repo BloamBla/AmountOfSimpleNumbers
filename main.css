@@ -6,3 +6,17 @@
 #amountOfSimpleNumbers {
     width: 200px;
 }
+
+#submitButton {
+    display: block;
+    margin: 15px 0 23px;
+}
+
+#amountOfSimpleNumbers {
+    display: block;
+    margin-bottom: 15px;
+}
+
+#simpleNumbers {
+    display: block;
+}
