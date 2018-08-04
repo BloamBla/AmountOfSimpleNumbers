@@ -9,12 +9,11 @@
 	<body>
 		<form action="" method="post" name="amount" id="form">
 			<label for="inputBox">Введите число больше 1: </label>
-			<input type="text" name="inputBox" placeholder="Input your number." id="inputBox"><br><br>
-			<input type="button" onclick="validAndAmount(document.getElementById('form'))" name="submit"
-			value="Посчитать"><br><br><br>
-			<label for="amountOfSimpleNumbers">Колчество простых чисел от 2 до вашего числа:</label><br>
-			<input type="text" name="amountOfSimpleNumbers" id="amountOfSimpleNumbers" readonly><br><br>
-			<label for="simpleNumbers">Простые числа в этом интервале:</label><br>
+			<input type="text" name="inputBox" placeholder="Input your number." id="inputBox">
+			<input type="button" name="submitButton" value="Посчитать" id="submitButton">
+			<label for="amountOfSimpleNumbers">Колчество простых чисел от 2 до вашего числа:</label>
+			<input type="text" name="amountOfSimpleNumbers" id="amountOfSimpleNumbers" readonly>
+			<label for="simpleNumbers">Простые числа в этом интервале:</label>
 			<textarea name="simpleNumbers" id="simpleNumbers" rows=""></textarea>
 		</form>
 	</body>
