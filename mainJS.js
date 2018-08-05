@@ -23,27 +23,29 @@ function amountOfSimpleNumbers(a) {
   return simpleNumbers;
 }
 
-function validAndAmount(form) {
-  let input = form.inputBox.value;
-
-  if (input === null) {
+function validAndAmount(numb) {
+  if (numb === null) {
     alert('Ещё увидимся!');
-  } else if (input === '') {
+  } else if (numb === '') {
     alert('Вы ничего не ввели!');
     location.reload();
-  } else if (input < 2) {
+  } else if (numb < 2) {
     alert('Это число меньше, либо равно 1!');
     location.reload();
-  } else if (isNaN(input)) {
+  } else if (isNaN(numb)) {
     alert('Это точно не число...');
     location.reload();
   } else {
-    let result = amountOfSimpleNumbers(input);
+    let result = amountOfSimpleNumbers(numb);
     document.getElementById('amountOfSimpleNumbers').value = result.length;
     document.getElementById('simpleNumbers').value = result.join(', ');
   }
 }
 
-let submitButton = document.getElementById('submitButton');
+function onButtonClick() {
+  let input = document.inputBox.value;
+  validAndAmount(input);
+}
 
-submitButton.addEventListener('click', validAndAmount);
+document.querySelector('#submitButton').addEventListener('click', onButtonClick, false);
+
