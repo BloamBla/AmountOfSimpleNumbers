@@ -6,7 +6,7 @@ function DOMIsReady() {
 }
 
 function validAndAmount() {
-  let input = document.getElementById('inputBox');
+  let input = document.getElementById('inputBox').value;
   if (input === null) {
     alert('Ещё увидимся!');
   } else if (input === '') {
