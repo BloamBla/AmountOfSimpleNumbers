@@ -1,22 +1,19 @@
-#simpleNumbers {
+.simpleNumbers {
     width: 200px;
     height: 100px;
+    display: block;
 }
 
-#amountOfSimpleNumbers {
+.amountOfSimpleNumbers {
     width: 200px;
 }
 
-#submitButton {
+.submitButton {
     display: block;
     margin: 15px 0 23px;
 }
 
-#amountOfSimpleNumbers {
+.amountOfSimpleNumbers {
     display: block;
     margin-bottom: 15px;
-}
-
-#simpleNumbers {
-    display: block;
 }
