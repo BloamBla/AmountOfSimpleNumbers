@@ -1,5 +1,29 @@
 /* eslint-disable no-undef */
 
+function DOMIsReady() {
+  let btn = document.getElementById('submitButton');
+  btn.addEventListener('click', validAndAmount);
+}
+
+function validAndAmount() {
+  let input = document.getElementById('inputBox');
+  if (input === null) {
+    alert('Ещё увидимся!');
+  } else if (input === '') {
+    alert('Вы ничего не ввели!');
+    location.reload();
+  } else if (input < 2) {
+    alert('Это число меньше, либо равно 1!');
+    location.reload();
+  } else if (isNaN(input)) {
+    alert('Это точно не число...');
+    location.reload();
+  } else {
+    let result = amountOfSimpleNumbers(input);
+    document.getElementById('amountOfSimpleNumbers').value = result.length;
+    document.getElementById('simpleNumbers').value = result.join(', ');
+  }
+}
 
 function amountOfSimpleNumbers(a) {
   let isSimpleNumber = false;
@@ -23,29 +47,4 @@ function amountOfSimpleNumbers(a) {
   return simpleNumbers;
 }
 
-function validAndAmount(numb) {
-  if (numb === null) {
-    alert('Ещё увидимся!');
-  } else if (numb === '') {
-    alert('Вы ничего не ввели!');
-    location.reload();
-  } else if (numb < 2) {
-    alert('Это число меньше, либо равно 1!');
-    location.reload();
-  } else if (isNaN(numb)) {
-    alert('Это точно не число...');
-    location.reload();
-  } else {
-    let result = amountOfSimpleNumbers(numb);
-    document.getElementById('amountOfSimpleNumbers').value = result.length;
-    document.getElementById('simpleNumbers').value = result.join(', ');
-  }
-}
-
-function onButtonClick() {
-  let input = document.inputBox.value;
-  validAndAmount(input);
-}
-
-document.querySelector('#submitButton').addEventListener('click', onButtonClick, false);
-
+document.addEventListener('DOMContentLoaded', DOMIsReady);
