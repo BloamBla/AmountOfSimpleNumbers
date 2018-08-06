@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
 function DOMIsReady() {
-  let btn = document.getElementById('submitButton');
+  const btn = document.getElementById('submitButton');
   btn.addEventListener('click', validAndAmount);
 }
 
